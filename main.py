@@ -1,5 +1,5 @@
-import image_download
-import find_location_nb_plate
+from image_download import main as download
+from find_location_nb_plate import main as finder
 import os
 import glob
 
@@ -23,12 +23,12 @@ def main():
     files = glob.glob('images/*.jpg')
     clear_folder(files)
 
-    image_download.main(pages)
+    download(pages)
 
     files = glob.glob('images_out/*.jpg')
     clear_folder(files)
 
-    find_location_nb_plate.main(pages*36)
+    finder(pages*36)
 
 
 if __name__ == '__main__':
