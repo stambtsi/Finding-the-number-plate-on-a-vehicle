@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from multiprocessing import Pool
 
-# I found this link using the Burp tool.
+# I found this link using the Burp Suite tool.
 # Because the link taken from the browser doesn't go straight to the right page
 # and takes time to load the images.
 link = "https://www.aaaauto.cz/cz/cars.php?carlist=1&make=109&page={}&modern-request&origListURL=%2Fskoda%2F"

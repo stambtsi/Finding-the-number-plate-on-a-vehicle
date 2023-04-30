@@ -17,8 +17,9 @@ def main():
     while pages < 1 or pages > 60:
         print("Enter the number of pages you would like to download and find location of number_plate\n"
               "P.S.: there are 36 images per page, pages with valid images 1-60")
-
-        pages = int(input())
+        str_in = input()
+        if str_in.isnumeric():
+            pages = int(str_in)
 
     try:
         os.mkdir('images')
