@@ -106,7 +106,7 @@ def main(number_images: int):
     for i in range(0, number_images):
         img = cv2.imread(f'images/{i}.jpg')
         anpr.find(img)
-        cv2.imwrite(f'images_out/{i}.jpg', img)
+        cv2.imwrite(f'images/{i}.jpg', img)
         if i % 50 == 0:
             print(i, "images have been processed.")
     print('Finally,', number_images, 'images were processed.')

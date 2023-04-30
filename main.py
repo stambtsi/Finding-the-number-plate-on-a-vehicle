@@ -16,17 +16,17 @@ def main():
     pages = -1
     while pages < 1 or pages > 60:
         print("Enter the number of pages you would like to download and find location of number_plate\n"
-              "Ps: there are 36 images per page, pages with valid images 1-60")
+              "P.S.: there are 36 images per page, pages with valid images 1-60")
 
         pages = int(input())
 
-    files = glob.glob('images/*.jpg')
-    clear_folder(files)
+    try:
+        os.mkdir('images')
+    except OSError:
+        files = glob.glob('images/*.jpg')
+        clear_folder(files)
 
     download(pages)
-
-    files = glob.glob('images_out/*.jpg')
-    clear_folder(files)
 
     finder(pages*36)
 

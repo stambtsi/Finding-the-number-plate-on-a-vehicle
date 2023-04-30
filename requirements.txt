@@ -1,6 +1,5 @@
-glob2
 requests
 bs4
-multiprocessing
 numpy
 opencv-python
+lxml
